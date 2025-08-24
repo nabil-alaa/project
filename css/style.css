@@ -13,6 +13,11 @@ body {
     width: 80%;
     margin: auto;
 }
+
+img {
+    width: 100%;
+    height: 100%;
+}
 a {
     text-decoration: none;
 }
@@ -26,17 +31,23 @@ a {
 .title::after {
     content: "";
     height: 5px;
-    width: 5%;
+    width: 80px;
     display: block;
     background-color: #3b82f6;
-    margin: 5px auto;
+    margin: 10px auto;
 }
-
+ul {
+    list-style-type: none;
+}
 .py {
     padding: 120px 0;
 }
 .mx {
     margin: 0 2%;
+}
+
+i {
+    color: #1e3a8a;
 }
 .header {
     background-color: rgb(224, 242, 254, 0.8);
@@ -53,7 +64,6 @@ a {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    color: #1e3a8a;
 }
 
 .header-search {
@@ -116,7 +126,7 @@ a {
     background-size: cover;
     background-image: url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
-.main .overlay {
+.overlay {
     background: rgba(30, 41, 59, 0.35);
     position: absolute;
     width: 100%;
@@ -151,6 +161,7 @@ button {
     font-weight: bold;
     text-transform: capitalize;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .PrimaryButton {
@@ -171,13 +182,13 @@ button {
     background-color: #bae6fd;
 }
 
-.welcome-parent {
+.parent {
     text-align: center;
     text-transform: capitalize;
     font-weight: bold;
     overflow: hidden;
 }
-.welcome-card {
+.card {
     border: 1px solid;
     width: 32%;
     padding: 40px 20px;
@@ -187,7 +198,7 @@ button {
     position: relative;
 }
 
-.welcome-card:after {
+.card:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -200,11 +211,11 @@ button {
     z-index: -1;
 }
 
-.welcome-card:hover::after {
+.card:hover::after {
     height: 100%;
     width: 100%;
 }
-.welcome-card:hover {
+.card:hover {
     color: #1e3a8a;
     transition: 0.5s;
 }
@@ -212,16 +223,15 @@ button {
 .fa-wand-magic-sparkles,
 .fa-mobile-screen-button {
     font-size: 40px;
-    color: #2563eb;
 }
-.welcome-card h3 {
+.card h3 {
     margin: 15px 0;
 }
-.welcome-card p {
+.card p {
     margin: 15px 0;
 }
 
-.welcome-card a {
+.card a {
     color: #2563eb;
 }
 .featured {
@@ -229,25 +239,27 @@ button {
     text-align: center;
 }
 
-.featured-parent {
-    overflow: hidden;
-    margin-top: 13px;
+.featured .parent {
+    margin-top: 30px;
 }
 
-.featured-card {
+.featured .card {
     display: inline-block;
+    float: none;
+    padding: 0;
     width: 28%;
-    position: relative;
+    border-radius: 0;
     text-transform: capitalize;
     color: #1e3a8a;
     font-weight: bold;
+    border: 0;
 }
 
-.featured-card img {
-    width: 100%;
+.featured .image {
+    height: 250px;
 }
 
-.featured-card .overlay {
+.featured .card .overlay {
     background-color: rgb(224, 242, 254, 0.7);
     position: absolute;
     opacity: 0;
@@ -256,6 +268,7 @@ button {
     visibility: hidden;
     transition: 0.3s;
     overflow: hidden;
+    text-align: center;
 }
 .overlay .info {
     position: absolute;
@@ -279,8 +292,290 @@ button {
     display: inline-block;
     margin: 4px;
 }
-.featured-card:hover .overlay {
+.featured .card:hover .overlay {
     opacity: 1;
     visibility: visible;
     height: 100%;
+}
+
+.offer .card::after {
+    left: 0;
+}
+
+.offer .card i {
+    position: absolute;
+}
+.offer .card h3,
+.offer .card p,
+.offer .card a {
+    padding-left: 60px;
+}
+.offer .card h3 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.offer .card {
+    text-align: left;
+}
+.offer .parent {
+    margin-top: 30px;
+}
+
+.choose {
+    background-color: rgb(224, 242, 254, 0.8);
+}
+.choose .parent {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.choose .title {
+    text-align: left;
+}
+
+.choose .title:after {
+    margin: 10px 0;
+}
+
+.choose-info {
+    float: left;
+    width: 50%;
+}
+
+.choose-img {
+    float: right;
+    width: 300px;
+    height: 400px;
+}
+
+.choose-info ul li {
+    margin-top: 30px;
+    font-size: 18px;
+}
+.choose-info ul li i {
+    margin-right: 10px;
+}
+
+.bg-image {
+    background-image: url("https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 40%;
+    position: relative;
+}
+.items {
+    text-align: center;
+    color: white;
+    float: left;
+    width: 25%;
+
+    /* margin-left: 0.5%; */
+}
+.items i {
+    font-size: 40px;
+}
+.items p {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bg-image .parent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.price-circle {
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid#1e3a8a;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 20px auto;
+}
+.price ul {
+    margin: 20px 0;
+}
+.price ul li {
+    margin-bottom: 20px;
+}
+
+.price-circle div {
+    position: absolute;
+    font-size: 20px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.price-circle div span {
+    font-size: 30px;
+}
+
+.price .card {
+    padding: 20px 0;
+    display: inline-block;
+    width: 25%;
+    float: none;
+}
+
+.price button {
+    background-color: #e0f2fe;
+    color: #1e3a8a;
+}
+
+.price .card:after {
+    width: 100%;
+}
+
+.price .card:hover .price-circle {
+    border: 2px solid#2563eb;
+}
+.reviews .items {
+    float: left;
+}
+.reviews .items p {
+    margin-top: 20px;
+}
+.items .image {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.items .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.items-info {
+    overflow: hidden;
+    font-size: 20px;
+}
+.items-info p {
+    margin-top: 15px;
+}
+
+.reviews .parent {
+    width: auto;
+    width: 60%;
+}
+.reviews .items {
+    width: auto;
+}
+
+.team .image {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+}
+.team .card .image::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.team .card:hover .image::after {
+    background-color: #bae5fd6c;
+    height: 100%;
+}
+.team .card:hover .icon {
+    opacity: 1;
+    visibility: visible;
+}
+
+.team .card::after {
+    width: 100%;
+    top: 0;
+}
+.team h3 {
+    font-size: 30px;
+}
+
+.team p {
+    margin: 0;
+}
+.team .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    z-index: 2;
+}
+.team .icon a {
+    display: block;
+    background-color: #3b82f6;
+    padding: 14px;
+    color: #bae6fd;
+}
+
+.team .icon a i {
+    color: #bae6fd;
+}
+
+.recent .image {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+.recent .card::after {
+    height: 100%;
+}
+
+.recent a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.recent h3 {
+    font-size: 30px;
+}
+.footer {
+    background-color: #bae5fd6c;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer .image {
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+.footer .image img {
+    border-radius: 20px;
+}
+.footer .icon {
+    margin: 10px 0;
+}
+.footer a {
+    display: inline-block;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    position: relative;
+}
+
+.footer i {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
