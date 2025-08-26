@@ -245,10 +245,7 @@ button {
     color: #1f2937;
     transition: 0.5s;
 }
-.card i .fa-utensils,
-.fa-kitchen-set,
-.fa-mobile-screen-button {
-}
+
 .card h3 {
     margin: 15px 0;
 }
