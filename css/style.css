@@ -212,7 +212,7 @@ button {
     text-align: center;
     text-transform: capitalize;
     font-weight: bold;
-    overflow: hidden;
+    overflow: auto;
 }
 .card {
     border: 1px solid;
@@ -381,10 +381,12 @@ button {
 
 .choose-img {
     float: right;
+}
+
+.choose-img img {
     width: 300px;
     height: 400px;
 }
-
 .choose-info ul li {
     margin-top: 30px;
     font-size: 18px;
@@ -392,6 +394,25 @@ button {
 .choose-info ul li i {
     margin-right: 10px;
     color: #b91c1c;
+}
+.dots {
+    margin-top: 10px;
+    text-align: center;
+}
+.dots div {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: #d977065b;
+}
+.dots .first {
+    background-color: #d97706;
+}
+
+.dots div:hover {
+    background-color: #d97706;
 }
 
 .bg-image {
@@ -625,4 +646,10 @@ button {
     left: 50%;
     transform: translate(-50%, 50%);
     color: #b91c1c;
+}
+.footer a:hover {
+    background-color: #b91c1c;
+}
+.footer a:hover i {
+    color: #f59e0b;
 }
