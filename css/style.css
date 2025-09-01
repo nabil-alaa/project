@@ -5,8 +5,9 @@
 }
 
 body {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+    font-family: "Story Script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .container {
@@ -20,6 +21,10 @@ img {
 }
 a {
     text-decoration: none;
+}
+
+button {
+    font-family: "Story Script", sans-serif;
 }
 .title {
     text-transform: capitalize;
