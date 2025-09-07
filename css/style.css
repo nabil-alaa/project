@@ -251,6 +251,11 @@ button {
     transition: 0.5s;
 }
 
+.card:hover h3 {
+    color: #b91c1c;
+    transition: 0.5s;
+}
+
 .card h3 {
     margin: 15px 0;
 }
