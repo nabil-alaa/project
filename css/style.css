@@ -319,6 +319,10 @@ button {
 .overlay .info h3 {
     font-size: 30px;
 }
+.overlay .info h3 {
+    font-size: 30px;
+    color: white;
+}
 .overlay .info p {
     margin: 10px 0;
 }
