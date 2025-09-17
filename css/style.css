@@ -625,11 +625,11 @@ button {
 .footer {
     background-color: #fde68a;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
     color: #b91c1c;
 }
 .footer .image {
-    width: 300px;
+    width: 250px;
     height: 200px;
     margin: auto;
 }
